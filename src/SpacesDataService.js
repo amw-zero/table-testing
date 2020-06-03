@@ -1,6 +1,8 @@
 function httpFetch(filter) {
-  // 
+  // return fetch(`/spaces?filter=${filter}`);
+
   if (filter === "available") {
+
     // "/spaces?filter=available"
     return [
       { suite: "S1", tenant: "Starbucks", size: 2000, type: "retail" },
