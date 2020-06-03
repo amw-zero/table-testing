@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SpacesDataService } from './SpacesDataService';
 
-test('fetches data correctly', async () => {
+test('fetching available spaces', async () => {
   let spaces = await SpacesDataService("available",
     (filter) => [{ suite: "S1", tenant: "Starbucks", size: 2000, type: "retail" }]);
 
