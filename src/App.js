@@ -32,7 +32,8 @@ function App() {
     <button onClick={_ => nextPage()}>All</button>
     {isLoading ? "Loading" : null}
     <div>
-      { !isLoading &&  spaces.map(e => <p key={e.suite}>{e.suite}</p>) }
+      Spaces
+      { !isLoading &&  spaces.map(e => <p key={e.suite}>{`${e.suite} | ${e.tenant} | ${e.size} | ${e.type}`}</p>) }
     </div>
   </>;
 }
