@@ -17,6 +17,16 @@ function httpFetch(filter) {
   }
 }
 
+/*
+  Implicit types:
+
+  type filter = 
+    | Availalble
+    | Unavailable
+    | All
+
+  type query = { filter: filter };
+ */
 export async function SpacesDataService(query, fetch = httpFetch) {
   let { filter } = query;
 
