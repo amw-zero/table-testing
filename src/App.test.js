@@ -1,9 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+import { SpacesDataService } from './SpacesDataService';
+
+test('fetches data correctly', async () => {
+  let spaces = await SpacesDataService("available",
+    (filter) => [{ suite: "S1", tenant: "Starbucks", size: 2000, type: "retail" }]);
+
+  expect(spaces[0]).toStrictEqual({ suite: "S1", tenant: "Starbucks", size: 2000, type: "retail" });
 });

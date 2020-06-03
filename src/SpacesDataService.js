@@ -19,12 +19,3 @@ export async function SpacesDataService(query, fetch = httpFetch) {
 
   return fetch(filter);
 };
-
-function test() {
-  let spaces = SpacesDataService("available", 
-    (filter) => [{ suite: "S1", tenant: "Starbucks", size: 2000, type: "retail" }]);
-
-  console.log(spaces);
-}
-
-test();
