@@ -1,12 +1,13 @@
 function httpFetch(filter) {
+  // 
   if (filter === "available") {
-    // "/spaces?page=0"
+    // "/spaces?filter=available"
     return [
       { suite: "S1", tenant: "Starbucks", size: 2000, type: "retail" },
       { suite: "S2", tenant: "Dunkin Donuts", size: 3000, type: "retail" },
     ];
   } else {
-    // "/spaces?page=1"
+    // "/spaces?filter=all"
     return [
       { suite: "S3", tenant: "Nordstrom", size: 2000, type: "retail" },
       { suite: "S4", tenant: "Macy's", size: 3000, type: "retail" },
